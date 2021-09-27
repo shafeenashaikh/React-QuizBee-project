@@ -25,10 +25,10 @@ class QuizBee extends Component{
                 <div className="title">QuizBee</div>
                 {this.state.questionBank.length > 0 &&
                     this.state.questionBank.map(
-                        ({question, answer, correct, questionId}) =>(
+                        ({question, answers, correct, questionId}) =>(
                             <QuestionBox 
                                 question={question}
-                                options={answer}
+                                options={answers}
                                 key={questionId}
                             />
                         )

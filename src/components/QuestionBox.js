@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
-const QuestionBox = ({question, questions}) => {
+const QuestionBox = ({question, options}) => {
+    
+    const[answer,setAnswer] = useState(options);
     return(
         <div className="questionBox">
             <div className="question">{question}</div>
+            {answer.map((text, index)=>(
+                <button key={index} className="answerBtn" >
+                    {text}
+                </button>
+            ))}
         </div>
     )
 } 
